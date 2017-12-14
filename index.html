@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Книжная полка</h1>
+        <div class="button-container">
+            <button id="addButton">Добавить книгу</button>
+        </div>
+        <div class="editing-form" id="modal-window">
+            <h2 id="action">Добавление книги</h2>
+            
+            <form action="#">
+                <label for="name">Наименование</label><br>
+                <input id="name" placeholder="ES6 и не только" type="text"><br>
+                
+                <label for="author">Автор</label><br>
+                <input id="author" placeholder="Кайл Симпсон" type="text"><br>
+                
+                <label for="year">Год выпуска</label><br>
+                <input id="year" placeholder="2017" type="number"><br>
+                
+                <label for="img">Изображение</label><br>
+                <input id="img" placeholder="https://" type="text"><br>
+                
+                <button id="saveButton">Сохранить</button>
+                <button id="cancelButton">Отменить</button>
+            </form>
+        </div>
+        <div class="books-container">
+            <table id="booksTable">
+                <tbody>
+                    <tr>
+                        <td class="cover">
+                            <div>
+                                <img src="#" alt="">
+                            </div>
+                        </td>
+                        <td class="description">
+                            <div>
+                                <h2>JavaScript и jQuery</h2>
+                                <span>Дэвид Дэвидсон</span>
+                                <span>2017</span>
+                            </div>
+                        </td>
+                        <td class="buttons">
+                            <button>Редактировать</button>
+                            <button>Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Another image</td>
+                        <td>Another name and another author</td>
+                        <td>edit and delete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
