@@ -25,7 +25,7 @@
                 <input id="author" placeholder="Кайл Симпсон" type="text"><br>
                 
                 <label for="year">Год выпуска</label><br>
-                <input id="year" placeholder="2017" type="number"><br>
+                <input id="year" max="2017" min="1" placeholder="2017" type="number"><br>
                 
                 <label for="img">Изображение</label><br>
                 <input id="img" placeholder="https://" type="text"><br>
@@ -36,8 +36,8 @@
         </div>
         <div class="books-container">
             <table id="booksTable">
-                <tbody>
-                    <tr>
+                <tbody id="booksTableBody">
+                    <tr id="0">
                         <td class="cover">
                             <div>
                                 <img src="#" alt="">
@@ -47,6 +47,24 @@
                             <div>
                                 <h2>JavaScript и jQuery</h2>
                                 <span>Дэвид Дэвидсон</span>
+                                <span>2016</span>
+                            </div>
+                        </td>
+                        <td class="buttons">
+                            <button id="editButton">Редактировать</button>
+                            <button id="deleteButton">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr id="1">
+                        <td class="cover">
+                            <div>
+                                <img src="#" alt="">
+                            </div>
+                        </td>
+                        <td class="description">
+                            <div>
+                                <h2>Изучаем программирование на JavaScript</h2>
+                                <span>Эрик Фримен, Элизабет Робсон</span>
                                 <span>2017</span>
                             </div>
                         </td>
@@ -54,11 +72,6 @@
                             <button>Редактировать</button>
                             <button>Удалить</button>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Another image</td>
-                        <td>Another name and another author</td>
-                        <td>edit and delete</td>
                     </tr>
                 </tbody>
             </table>

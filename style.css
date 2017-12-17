@@ -37,7 +37,6 @@ main h1{
 .editing-form{
     background-color: #fff;
     display: none;
-/*    margin: 0 auto;*/
     padding: 40px 0 0 40px;
     position: fixed; /*?*/
     border: 1px solid #333;
@@ -63,7 +62,7 @@ main h1{
     width: 6%;
 }
 
-.editing-form button{
+.editing-form button, .editing-form input[type="submit"]{
     border: none;
     height: 40px;
     letter-spacing: 0.1em;
@@ -118,6 +117,14 @@ main h1{
 .cover div{
     background-color: #b5b5b5;
     height: 180px;
+}
+
+.cover img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .description div{
