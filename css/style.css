@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease; }
+
+body {
+  background-color: #dddddd; }
+
+#wrapper {
+  padding: 20px 0 0 40px; }
+  #wrapper .add-button-area {
+    margin-top: 20px; }
+    #wrapper .add-button-area button {
+      background-color: #8e8d8d;
+      border: 2px solid #414141;
+      color: #ededed;
+      padding: 8px; }
+    #wrapper .add-button-area button:hover {
+      background-color: #ededed;
+      border-color: #8e8d8d;
+      color: #8e8d8d;
+      cursor: pointer; }
+  #wrapper #modal-window {
+    display: none;
+    margin-top: 20px; }
+    #wrapper #modal-window .modal-area {
+      background-color: #fff;
+      padding: 30px 40px; }
+      #wrapper #modal-window .modal-area h2 {
+        margin-bottom: 40px; }
+      #wrapper #modal-window .modal-area form label, #wrapper #modal-window .modal-area form input {
+        display: block; }
+      #wrapper #modal-window .modal-area form input {
+        margin-bottom: 30px;
+        height: 35px;
+        padding-left: 10px;
+        width: 90%; }
+      #wrapper #modal-window .modal-area form input:nth-of-type(3) {
+        width: 60px; }
+      #wrapper #modal-window .modal-area form button {
+        height: 40px;
+        width: 120px; }
+      #wrapper #modal-window .modal-area form #save {
+        background-color: #696969;
+        color: #efefef;
+        margin-right: 10px; }
+      #wrapper #modal-window .modal-area form #save:hover {
+        background-color: #7687fc;
+        color: #ffffff;
+        cursor: pointer; }
+      #wrapper #modal-window .modal-area form #cancel {
+        background-color: #ddd;
+        color: #333; }
+      #wrapper #modal-window .modal-area form #cancel:hover {
+        background-color: #ff8080;
+        color: #ffffff;
+        cursor: pointer; }
+  #wrapper #list-container {
+    margin-top: 20px; }
+    #wrapper #list-container #list-area {
+      background-color: #fff; }
+      #wrapper #list-container #list-area .book {
+        border-bottom: 2px solid #ddd;
+        height: 180px;
+        padding: 20px; }
+        #wrapper #list-container #list-area .book .cover-area {
+          background-color: #ddd;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          height: 100%; }
+        #wrapper #list-container #list-area .book .content-area {
+          padding-left: 40px; }
+          #wrapper #list-container #list-area .book .content-area p {
+            margin-bottom: 0; }
+          #wrapper #list-container #list-area .book .content-area .book-name {
+            font-size: 18px;
+            font-weight: bold; }
+        #wrapper #list-container #list-area .book .buttons-area {
+          padding-right: 0; }
+          #wrapper #list-container #list-area .book .buttons-area button {
+            border: 2px solid #ddd;
+            color: #ddd;
+            display: block;
+            margin-left: auto;
+            padding: 5px;
+            text-align: center;
+            width: 80%; }
+          #wrapper #list-container #list-area .book .buttons-area button:hover {
+            border-color: #6c6c6c;
+            background-color: #ddd;
+            color: #fff;
+            cursor: pointer; }
+          #wrapper #list-container #list-area .book .buttons-area button:first-child {
+            margin-bottom: 10px; }
