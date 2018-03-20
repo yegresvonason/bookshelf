@@ -4,13 +4,30 @@ function init() {
     
     var addButton = document.getElementById("addButton"),
         saveButton = document.getElementById("save"),
-        cancelButton = document.getElementById("cancel");
+        cancelButton = document.getElementById("cancel"),
+        books = document.getElementsByClassName("book");
 
-    
+    // Устанавливаем обработчики на нажатие: 
     addButton.addEventListener("click", loadModalWindow, false);
     saveButton.addEventListener("click", addBookToList, false);
     cancelButton.addEventListener("click", closeModalWindow, false);
-    
+
+    function initBooksList(){
+
+        var editButton = new Array(),
+            removeButton = new Array();
+
+        for (var i = 0; i < books.length; i++){
+            editButton[i] = books[i].getElementsByClassName("editButton")[0];
+            editButton[i].id = i;
+            editButton[i].addEventListener("click", function(){editBook(this.id)}, false);
+            removeButton[i] = books[i].getElementsByClassName("removeButton")[0];
+            removeButton[i].id = i;
+            removeButton[i].addEventListener("click", function(){removeBook(this.id)}, false);
+        }
+    }
+    initBooksList();
+
     function loadModalWindow() {
         
         var modalWindow = document.getElementById("modal-window"),
@@ -33,6 +50,10 @@ function init() {
         
         modalWindow.style.display = "block";
         listContainer.style.display = "none";
+
+        /* Не факт что следующая функция нужна: */
+        books = document.getElementsByClassName("book");
+        initBooksList();
     }
     
     function addBookToList(event) {
@@ -51,7 +72,7 @@ function init() {
         function print() {
             
             // Ищем div-элемент для клонирования и контейнер для вставки создаваемого элемента:
-            var childToClone = document.getElementById("childToClone"),
+            var childToClone = document.getElementsByClassName("book")[0];
                 listArea = document.getElementById("list-area");
             
             // Клонируем элемент с дочерними узлами:
@@ -123,7 +144,11 @@ function init() {
         
         // Добавляем элемент на страницу:
         if (validate())print();
-        
+
+        /* Не факт что следующая функция нужна: */
+        // Обновляем список книг:
+        books = document.getElementsByClassName("book");
+        initBooksList();
     }
     
     function closeModalWindow(event) {
@@ -146,5 +171,29 @@ function init() {
         
         modalWindow.style.display = "none";
         listContainer.style.display = "block";
+
+        /* Не факт что следующая функция нужна: */
+        books = document.getElementsByClassName("book");
+        initBooksList();
+    }
+
+    function editBook(id) {
+        var bookId = id;
+        console.log("Будет отредактирована книга под номером: " + bookId);
+
+
+    }
+
+    function removeBook(id) {
+        var bookId = id,
+            listArea = document.getElementById("list-area");
+
+        console.log("Будет удалена книга под номером: " + bookId);
+
+        listArea.removeChild(books[bookId]);
+
+        // Обновляем список оставшихся книг:
+        books = document.getElementsByClassName("book");
+        initBooksList();
     }
 }

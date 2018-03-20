@@ -1,9 +1,12 @@
-*{
+*
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease;
+
+    transition: all .3s ease;
 }
+
 
 body{
     background-color: #dddddd;
@@ -27,11 +30,13 @@ body{
         }
         
         button:hover{
-            background-color: #ededed;
-            border-color: #8e8d8d;
-            color: #8e8d8d;
             cursor: pointer;
+
+            color: #8e8d8d;
+            border-color: #8e8d8d;
+            background-color: #ededed;
         }
+
     }
     
     #modal-window{
