@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Книжная полка</title>
+	<meta name="description" content="Приложение книжная полка">
+	<meta name="keywords" content="Книжная полка, Приложение книжная полка">
+	<meta name="author" content="Sergey Nosanov">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- include fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<!-- include css -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<h1>Книжная полка</h1>
+		<button id="addButton">Добавить книгу</button>
+		<div class="books__container container">
+			<div class="row">
+				<div class="books__item col-12">
+					<div class="cover" style="background-image: url(img/covers/1.jpg);"></div>
+					<div class="info">
+						<div class="books__item_title">ES6 & не только</div>
+						<div class="books__item_author">Кайл Симпсон</div>
+						<div class="books__item_year">2017</div>
+					</div>
+					<div class="buttons">
+						<button>Редактировать</button>
+						<button>Удалить</button>
+					</div>
+				</div>
+				<div class="books__item col-12">
+					<div class="cover" style="background-image: url(img/covers/2.jpg);"></div>
+					<div class="info">
+						<div class="books__item_title">Новая большая книга CSS</div>
+						<div class="books__item_author">Дэвид Макфарланд</div>
+						<div class="books__item_year">2016</div>
+					</div>
+					<div class="buttons">
+						<button>Редактировать</button>
+						<button>Удалить</button>
+					</div>
+				</div>
+				<div class="books__item col-12">
+					<div class="cover" style="background-image: url(img/covers/3.jpg);"></div>
+					<div class="info">
+						<div class="books__item_title">Оптимизация JavaScript</div>
+						<div class="books__item_author">Николас Закас</div>
+						<div class="books__item_year">2013</div>
+					</div>
+					<div class="buttons">
+						<button>Редактировать</button>
+						<button>Удалить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__container container">
+			<h2>Добавление книги</h2>
+			<h3>Наименование</h3>
+			<input type="text">
+			<h3>Автор</h3>
+			<input type="text">
+			<h3>Год выпуска</h3>
+			<input type="date">
+			<h3>Изображение</h3>
+			<input type="text">
+			<button class="saveButton">Сохранить</button>
+			<button class="cancelButton">Отменить</button>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+
+
+	<!-- include js -->
+	<script src="js/scripts.js"></script>
+</body>
+</html>
